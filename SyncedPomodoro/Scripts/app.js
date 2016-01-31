@@ -24,6 +24,7 @@
                 $scope.timeLeft = ($scope.resting ? 5 : 25) * 60;
                 var audio = new Audio("http://moosti.com/alarm.wav");
                 audio.play();
+                if (!$scope.resting) $scope.sprintNumber += 1;
             }
         }, 1000);
     });
